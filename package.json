@@ -1,6 +1,6 @@
 {
   "name": "victor-quotes-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A CLI to print quotes by Victor",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
