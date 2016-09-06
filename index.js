@@ -10,7 +10,8 @@ var quotes = [
   'Man är ju inte 20 längre',
   'Mmm, henne på en bredd macka',
   'setGusta(me);',
-  'Jag tar en kvällens'
+  'Jag tar en kvällens',
+  'Hue hue'
 ];
 
 var verbs = [
