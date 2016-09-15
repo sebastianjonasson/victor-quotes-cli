@@ -12,25 +12,28 @@ var quotes = [
   'setGusta(me);',
   'Jag tar en kvällens',
   'Hue hue',
-  'Asså jag minns när jag var i din ålder. MMMmm, jag var ung och rak i ryggen.'
+  'Asså jag minns när jag var i din ålder. MMMmm, jag var ung och rak i ryggen',
 ];
 
 var verbs = [
 	'states',
 	'declares',
 	'farts',
-	'sings'
+	'sings',
 ]
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function getRandomListValue() {
+function getRandomListValue(withExtra) {
   var index = getRandomInt(0, this.length-1);
-  return this[index];
+  return withExtra && index % 6 == 0 ? this[index] + getDatedQuote() : this[index]; 
 }
 
+function getDatedQuote(){
+  return ". Ja asså jag minns den " + new Date() + " som det var idag. Jag kommer ihåg för jag hade precis dessa kläderna på mig"; 
+}
 
-var output = ` --> Victor ${getRandomListValue.call(verbs)}: ${getRandomListValue.call(quotes)}`;
+var output = ` --> Victor ${getRandomListValue.call(verbs)}: ${getRandomListValue.call(quotes, true)}`;
 console.log(output);
