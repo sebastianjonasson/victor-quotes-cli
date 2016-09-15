@@ -11,7 +11,8 @@ var quotes = [
   'Mmm, henne på en bredd macka',
   'setGusta(me);',
   'Jag tar en kvällens',
-  'Hue hue'
+  'Hue hue',
+  'Asså jag minns när jag var i din ålder. MMMmm, jag var ung och rak i ryggen.'
 ];
 
 var verbs = [
