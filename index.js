@@ -1,5 +1,9 @@
 #! /usr/bin/env node
 
+
+/* 
+ *	Quotes
+ */
 var quotes = [
   '10000 öl',
   'Man är ju inte nyponfärsk',
@@ -16,24 +20,34 @@ var quotes = [
 ];
 
 var verbs = [
-	'states',
-	'declares',
-	'farts',
-	'sings',
+  'states',
+  'declares',
+  'farts',
+  'sings',
 ]
 
+
+/*
+ *	Functions
+ */
 function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function getRandomListValue(withExtra) {
   var index = getRandomInt(0, this.length-1);
-  return withExtra && index % 6 == 0 ? this[index] + getDatedQuote() : this[index]; 
+
+  return (withExtra && index % 6 == 0)
+    ? this[index] + getDatedQuote()
+    : this[index]; 
 }
 
 function getDatedQuote(){
-  return ". Ja asså jag minns den " + new Date() + " som det var idag. Jag kommer ihåg för jag hade precis dessa kläderna på mig"; 
+  return `. Ja asså jag minns den ${new Date()} som det var idag. Jag kommer ihåg för jag hade precis dessa kläderna på mig`; 
 }
 
+/*
+ *	Script
+ */
 var output = ` --> Victor ${getRandomListValue.call(verbs)}: ${getRandomListValue.call(quotes, true)}`;
 console.log(output);
