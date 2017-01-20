@@ -1,6 +1,5 @@
 #! /usr/bin/env node
 
-
 /* 
  *	Quotes
  */
@@ -43,7 +42,7 @@ function getRandomListValue(withExtra) {
 }
 
 function getDatedQuote(){
-  return `. Ja asså jag minns den ${new Date()} som det var idag. Jag kommer ihåg för jag hade precis dessa kläderna på mig`; 
+  return `. Ja asså jag minns den ${new Date()} som det var idag. Jag kommer ihåg för jag hade precis dessa kläderna på mig.`; 
 }
 
 /*
