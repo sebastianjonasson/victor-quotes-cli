@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 /* 
- *	Quotes
+ *  Quotes
  */
 var quotes = [
   '10000 öl',
@@ -16,7 +16,7 @@ var quotes = [
   'Jag tar en kvällens',
   'Hue hue',
   'Asså jag minns när jag var i din ålder. MMMmm, jag var ung och rak i ryggen',
-	'Ha det fett som fan'
+  'Ha det fett som fan'
 ];
 
 var verbs = [
@@ -28,7 +28,7 @@ var verbs = [
 
 
 /*
- *	Functions
+ *  Functions
  */
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -47,7 +47,7 @@ function getDatedQuote(){
 }
 
 /*
- *	Script
+ *  Script
  */
 var output = ` --> Victor ${getRandomListValue.call(verbs)}: ${getRandomListValue.call(quotes, true)}`;
 console.log(output);
