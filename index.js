@@ -16,6 +16,7 @@ var quotes = [
   'Jag tar en kvällens',
   'Hue hue',
   'Asså jag minns när jag var i din ålder. MMMmm, jag var ung och rak i ryggen',
+	'Ha det fett som fan'
 ];
 
 var verbs = [
