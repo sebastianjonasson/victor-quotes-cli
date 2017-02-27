@@ -5,9 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": { 
-    "type" : "git",
-    "url" : "https://github.com/sebastianjonasson/victor-quotes-cli"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sebastianjonasson/victor-quotes-cli"
   },
   "keywords": [
     "victor",
@@ -18,5 +18,8 @@
   "preferGlobal": true,
   "bin": {
     "victorq": "index.js"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3"
   }
 }

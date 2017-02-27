@@ -1,4 +1,5 @@
 #! /usr/bin/env node
+var chalk = require('chalk');
 
 /* 
  *  Quotes
@@ -16,7 +17,8 @@ var quotes = [
   'Jag tar en kvällens',
   'Hue hue',
   'Asså jag minns när jag var i din ålder. MMMmm, jag var ung och rak i ryggen',
-  'Ha det fett som fan'
+  'Ha det fett som fan',
+	`Kaffe, kaffe, kaffe, kaffe, kaffe, kaffe, kaffe`
 ];
 
 var verbs = [
@@ -24,7 +26,30 @@ var verbs = [
   'declares',
   'farts',
   'sings',
-]
+];
+
+var colors = [
+  'black',
+  'red',
+  'green',
+  'yellow',
+  'blue',
+  'magenta',
+  'cyan',
+  'white',
+  'gray'
+];
+
+var bgColors = [
+  'bgBlack',
+  'bgRed',
+  'bgGreen',
+  'bgYellow',
+  'bgBlue',
+  'bgMagenta',
+  'bgCyan',
+  'bgWhite'
+];
 
 
 /*
@@ -34,7 +59,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function getRandomListValue(withExtra) {
+Array.prototype.random = function (withExtra) {
   var index = getRandomInt(0, this.length-1);
 
   return (withExtra && index % 6 == 0)
@@ -49,5 +74,5 @@ function getDatedQuote(){
 /*
  *  Script
  */
-var output = ` --> Victor ${getRandomListValue.call(verbs)}: ${getRandomListValue.call(quotes, true)}`;
+var output = ` --> ${chalk[bgColors.random()]('Victor')} ${chalk[colors.random()](verbs.random())}: ${chalk[bgColors.random()](quotes.random(true))}`;
 console.log(output);
